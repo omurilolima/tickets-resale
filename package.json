@@ -1,0 +1,30 @@
+{
+  "name": "tickets-resale",
+  "version": "1.0.0",
+  "description": "Watches a Ticketmaster event page and sends a Telegram alert when resale inventory shows up.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npx puppeteer browsers install chrome",
+    "browsers": "npx puppeteer browsers install chrome",
+    "alert": "node index.js",
+    "alert:dry": "DRY_RUN=1 node index.js",
+    "telegram:ping": "node scripts/telegram-ping.mjs"
+  },
+  "keywords": [
+    "ticketmaster",
+    "resale",
+    "telegram",
+    "puppeteer",
+    "notifications"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "puppeteer": "^21.1.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}
